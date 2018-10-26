@@ -3,10 +3,9 @@
 include_once("config.php");
 
 if(isset($_POST['update']))
-{	
+{	//i did
 
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
-	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
 	$age = mysqli_real_escape_string($mysqli, $_POST['age']);
 	$email = mysqli_real_escape_string($mysqli, $_POST['email']);	
@@ -61,7 +60,7 @@ while($res = mysqli_fetch_array($result))
 		<table border="0">
 			<tr> 
 				<td>Name</td>
-				<td><input type="text" name="name" value="<?php echo $name;?>"></td>
+				<td><input type="hidden" name="name" value="<?php echo $name;?>"></td>
 			</tr>
 			<tr> 
 				<td>Age</td>
